@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Management System - Login</title>
+    <link rel="stylesheet" href="Css/index.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="toast" id="loginToast">Welcome to Inventory Management System!</div>
+    <div class="page-transition"></div>
+
+    <nav class="navbar">
+        <div class="nav-left">
+            <img src="images/logoIMS.png" alt="IMS Logo" class="logo light-logo">
+            <img src="images/logoIMS.png" alt="IMS Logo Dark" class="logo dark-logo">
+        </div>
+        <div class="nav-right">
+            <a href="#about-section" class="nav-link">About</a>
+            <a href="#features" class="nav-link">Features</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="slideshow-container">
+            <div class="slide" style="background-image: url('images/inventory1.jpg')"></div>
+            <div class="slide" style="background-image: url('images/inventory2.jpg')"></div>
+            <div class="slide" style="background-image: url('images/inventory3.jpg')"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-left">
+                <h1>Manage Your<br>Inventory Smartly</h1>
+                <div class="hero-buttons">
+                    <a href="#login-section" class="hero-btn login">Login</a>
+                    <a href="#signup-section" class="hero-btn signup">Sign Up</a>
+                </div>
+            </div>
+            <div class="hero-right">
+                <img src="images/Progressive-Bundle-System.png" alt="Dashboard Preview">
+            </div>
+        </div>
+    </section>      
+
+    <section class="info-section">
+        <div class="info-box">
+            <i class='bx bx-package info-icon'></i>
+            <p>Efficient inventory tracking and management system</p>
+        </div>
+        
+        <p class="info-divider">...................</p>
+        
+        <div class="info-box">
+            <i class='bx bx-line-chart info-icon'></i>
+            <p>Real-time analytics and reporting tools</p>
+        </div>
+    </section>
+
+
+
+    <section class="features-section" id="features">
+        <div class="features-content">
+            <div class="section-title-container">
+                <h2 class="section-title">
+                    Key Features for Efficient Inventory Management
+                </h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class='bx bx-package feature-icon'></i>
+                    <h3>Inventory Tracking</h3>
+                    <p>Real-time tracking of stock levels and movements</p>
+                </div>
+                <div class="feature-card">
+                    <i class='bx bx-cart feature-icon'></i>
+                    <h3>Order Management</h3>
+                    <p>Streamlined order processing and fulfillment</p>
+                </div>
+                <div class="feature-card">
+                    <i class='bx bx-line-chart feature-icon'></i>
+                    <h3>Analytics & Reports</h3>
+                    <p>Detailed insights and performance metrics</p>
+                </div>
+                <div class="feature-card">
+                    <i class='bx bx-bell feature-icon'></i>
+                    <h3>Stock Alerts</h3>
+                    <p>Automated notifications for low stock levels</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="login-section" id="login-section">
+        <div class="login-container">
+            <h2>Login to Your Account</h2>
+            <form action="php/login.php" method="POST" class="login-form">
+                <div class="form-group">
+                    <i class='bx bx-user'></i>
+                    <input type="text" name="username" placeholder="Username" required>
+                </div>
+                <div class="form-group">
+                    <i class='bx bx-lock-alt'></i>
+                    <input type="password" name="password" placeholder="Password" required>
+                </div>
+                <button type="submit" class="login-btn">Login</button>
+                <p class="form-footer">Don't have an account? <a href="#signup-section">Sign Up</a></p>
+            </form>
+        </div>
+    </section>
+
+    <section class="signup-section" id="signup-section">
+        <div class="signup-container">
+            <h2>Create New Account</h2>
+            <form action="php/signup.php" method="POST" class="signup-form">
+                <div class="form-group">
+                    <i class='bx bx-user'></i>
+                    <input type="text" name="username" placeholder="Username" required>
+                </div>
+                <div class="form-group">
+                    <i class='bx bx-lock-alt'></i>
+                    <input type="password" name="password" placeholder="Password" required>
+                </div>
+                <div class="form-group">
+                    <i class='bx bx-lock-alt'></i>
+                    <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+                </div>
+                <button type="submit" class="signup-btn">Create Account</button>
+                <p class="form-footer">Already have an account? <a href="#login-section">Login</a></p>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer-section">
+        <div class="footer-content">
+            <div class="footer-links">
+                <span>© 2024 Inventory Management System</span>
+                <a href="#">Terms</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Help Center</a>
+                <a href="#">Contact Support</a>
+            </div>
+            
+        </div>
+    </footer>
+
+    <script>
+        // Add scroll event listener
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+
+        // Slideshow functionality
+        function startSlideshow() {
+            const slides = document.querySelectorAll('.slide');
+            let currentSlide = 0;
+            
+            // Set first slide as active
+            slides[0].classList.add('active');
+            
+            setInterval(() => {
+                // Remove active class from current slide
+                slides[currentSlide].classList.remove('active');
+                
+                // Move to next slide
+                currentSlide = (currentSlide + 1) % slides.length;
+                
+                // Add active class to new slide
+                slides[currentSlide].classList.add('active');
+            }, 5000); // Change slide every 5 seconds
+        }
+
+        // Start slideshow when page loads
+        window.addEventListener('load', startSlideshow);
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
