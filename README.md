@@ -2,6 +2,9 @@
 <p align="center"><em>For Elective1 and MNSTDEV</em></p>
 <p align="center"><em>BSIT231A</em></p>
 
+##Cloud Web Link
+inventorysys-epctarh4dnaegveq.southeastasia-01.azurewebsites.net
+
 ## Group Members
 
 -  Burgos, Sherwin M.  
