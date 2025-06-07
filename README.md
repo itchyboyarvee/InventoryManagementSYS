@@ -21,7 +21,7 @@ The purpose of this final project for Elective 1 and MNSTDEV is to showcase the 
 
 ## Features Implemented
 
-In this project, I implemented the core foundational features of the system, focusing on user authentication and basic navigation. Specifically, I developed a Login and Signup system to manage user access securely. Additionally, I created a Dashboard interface that users are directed to after logging in, providing a central hub for future functionalities. These components establish the initial framework of the system and lay the groundwork for further development.
+In this project, We implemented the core foundational features of the system, focusing on user authentication and basic navigation. Specifically, We developed a Login and Signup system to manage user access securely. Additionally, We created a Dashboard interface that users are directed to after logging in, providing a central hub for future functionalities. These components establish the initial framework of the system and lay the groundwork for further development.
 
 ---
 
